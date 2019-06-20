@@ -1,4 +1,4 @@
-# Bitcoin Alert Project Make File
+# OODIO_Task1 Make File
 
 VIRTUALENV = $(shell which virtualenv)
 
@@ -14,7 +14,7 @@ install: clean venv
 	# . venv/bin/activate; python setup.py develop
 
 launch: venv # shutdown
-	. venv/bin/activate; python pyimage.py 
+	. venv/bin/activate; python tempCreator.py 
 
 shutdown:
 	ps -ef | grep "server.py" | grep -v grep | awk '{print $$2}' | xargs kill
